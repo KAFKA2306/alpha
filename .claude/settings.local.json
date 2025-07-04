@@ -12,7 +12,8 @@
       "Bash(apt-get install:*)",
       "Bash(pip3 install:*)",
       "Bash(pip install:*)",
-      "Bash(streamlit run:*)"
+      "Bash(streamlit run:*)",
+      "Bash(mv:*)"
     ],
     "deny": []
   }
