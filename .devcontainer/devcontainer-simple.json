@@ -1,0 +1,29 @@
+{
+  "name": "AI Stock Prediction - Simple Setup",
+  "image": "python:3.11-slim",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "username": "vscode"
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11",
+      "installTools": true
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python3",
+        "python.terminal.activateEnvironment": true
+      }
+    }
+  },
+  "postCreateCommand": "pip install --upgrade pip && pip install numpy pandas",
+  "forwardPorts": [8000, 8888],
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "workspaceFolder": "/workspace"
+}

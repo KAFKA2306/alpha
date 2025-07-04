@@ -1,0 +1,106 @@
+version: '3.8'
+
+services:
+  development:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../:/workspace:cached
+      - ~/.gitconfig:/home/vscode/.gitconfig
+    environment:
+      - POSTGRES_HOST=postgres
+      - POSTGRES_DB=stockprediction
+      - POSTGRES_USER=stock_user
+      - POSTGRES_PASSWORD=stock_pass
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+    depends_on:
+      - postgres
+      - redis
+      - mlflow
+    ports:
+      - "8000:8000"
+      - "8888:8888"
+      - "3000:3000"
+    networks:
+      - stock-prediction-network
+    command: sleep infinity
+
+  postgres:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=stockprediction
+      - POSTGRES_USER=stock_user
+      - POSTGRES_PASSWORD=stock_pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - stock-prediction-network
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - stock-prediction-network
+
+  mlflow:
+    image: python:3.11-slim
+    environment:
+      - MLFLOW_BACKEND_STORE_URI=postgresql://stock_user:stock_pass@postgres:5432/stockprediction
+      - MLFLOW_DEFAULT_ARTIFACT_ROOT=/mlflow/artifacts
+    volumes:
+      - mlflow_artifacts:/mlflow/artifacts
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres
+    networks:
+      - stock-prediction-network
+    command: >
+      bash -c "pip install mlflow psycopg2-binary && 
+               mlflow server --host 0.0.0.0 --port 5000 
+               --backend-store-uri postgresql://stock_user:stock_pass@postgres:5432/stockprediction
+               --default-artifact-root /mlflow/artifacts"
+
+  grafana:
+    image: grafana/grafana:latest
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    ports:
+      - "3001:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning
+    depends_on:
+      - postgres
+    networks:
+      - stock-prediction-network
+
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    networks:
+      - stock-prediction-network
+
+volumes:
+  postgres_data:
+  redis_data:
+  mlflow_artifacts:
+  grafana_data:
+  prometheus_data:
+
+networks:
+  stock-prediction-network:
+    driver: bridge

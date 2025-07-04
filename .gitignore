@@ -1,0 +1,35 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.Python
+build/
+dist/
+
+# Environments
+.env
+venv/
+env/
+
+# Logs
+logs/
+*.log
+
+# Data and Results
+data/
+results/
+*.json # 一時的なJSONファイルや結果ファイルを無視
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# OS generated files
+.DS_Store
+.Trashes
+Thumbs.db
+ehthumbs.db

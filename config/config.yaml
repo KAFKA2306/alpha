@@ -1,0 +1,173 @@
+# Alpha Architecture Agent Configuration
+
+project:
+  name: "alpha-architecture-agent"
+  version: "0.1.0"
+  description: "AI Agent-based Stock Prediction Architecture Explorer"
+
+# Database Configuration
+database:
+  postgres:
+    host: ${POSTGRES_HOST:localhost}
+    port: ${POSTGRES_PORT:5432}
+    database: ${POSTGRES_DB:stockprediction}
+    username: ${POSTGRES_USER:stock_user}
+    password: ${POSTGRES_PASSWORD:stock_pass}
+    
+  redis:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+    db: ${REDIS_DB:0}
+
+# ML Configuration
+ml:
+  mlflow:
+    tracking_uri: ${MLFLOW_TRACKING_URI:http://localhost:5000}
+    experiment_name: "alpha-architecture-search"
+    
+  models:
+    max_blocks: 50
+    max_combinations: 1000
+    training_epochs: 100
+    batch_size: 32
+    learning_rate: 0.001
+    
+  domains:
+    - normalization
+    - feature_extraction
+    - mixing
+    - encoding
+    - financial_domain
+    - feature_integration
+    - time_integration
+    - stock_features
+    - attention
+    - feedforward
+    - time_embedding
+    - sequence_models
+    - prediction_heads
+
+# AI Agent Configuration
+agent:
+  llm:
+    provider: ${LLM_PROVIDER:openai}
+    model: ${LLM_MODEL:gpt-4}
+    temperature: 0.7
+    max_tokens: 4000
+    
+  openai:
+    api_key: ${OPENAI_API_KEY}
+    
+  anthropic:
+    api_key: ${ANTHROPIC_API_KEY}
+    
+  generation:
+    max_architectures: 70
+    diversity_threshold: 0.8
+    complexity_range: [5, 15]
+
+# Data Configuration
+data:
+  japanese_stocks:
+    source: "j-quants"
+    api_key: ${JQUANTS_API_KEY}
+    symbols_file: "config/japanese_stocks.txt"
+    
+  timeframes:
+    - "1d"
+    - "1h"
+    - "15m"
+    
+  features:
+    sequence_length: 252
+    prediction_horizon: 1
+    
+  preprocessing:
+    returns_calculation: "log"
+    outlier_threshold: 3.0
+    missing_value_strategy: "forward_fill"
+
+# Strategy Configuration
+strategy:
+  portfolio:
+    long_percentage: 0.05  # Top 5% for long
+    short_percentage: 0.05  # Bottom 5% for short
+    rebalance_frequency: "daily"
+    
+  backtest:
+    start_date: "2017-01-01"
+    end_date: "2023-12-31"
+    validation_start: "2024-01-01"
+    validation_end: "2025-02-28"
+    
+  evaluation:
+    metrics:
+      - "sharpe_ratio"
+      - "sortino_ratio"
+      - "max_drawdown"
+      - "calmar_ratio"
+      - "total_return"
+      - "volatility"
+      
+  ensemble:
+    top_n: 20
+    weighting: "equal"  # or "sharpe_weighted"
+    correlation_threshold: 0.8
+
+# API Configuration
+api:
+  host: ${API_HOST:0.0.0.0}
+  port: ${API_PORT:8000}
+  debug: ${DEBUG:false}
+  
+# Monitoring Configuration
+monitoring:
+  prometheus:
+    enabled: true
+    port: 9090
+    
+  grafana:
+    enabled: true
+    port: 3001
+    
+  logging:
+    level: ${LOG_LEVEL:INFO}
+    format: "structured"
+    
+# MCP Servers Configuration
+mcp_servers:
+  finance:
+    enabled: true
+    sources:
+      - "yahoo_finance"
+      - "alpha_vantage"
+      - "j_quants"
+      
+  macro_data:
+    enabled: true
+    sources:
+      - "fred"
+      - "world_bank"
+      - "oecd"
+      
+  alternative_data:
+    enabled: true
+    sources:
+      - "news_sentiment"
+      - "social_media"
+      - "satellite_data"
+
+# Security Configuration
+security:
+  api_key_rotation: true
+  encryption_at_rest: true
+  audit_logging: true
+  
+# Development Configuration
+development:
+  jupyter:
+    enabled: true
+    port: 8888
+    
+  hot_reload: true
+  profiling: false

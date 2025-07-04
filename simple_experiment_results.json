@@ -1,0 +1,104 @@
+{
+  "experiment_name": "alpha_architecture_simplified_v1",
+  "start_time": "2025-07-04T09:52:28.317979",
+  "phases": {
+    "phase1": {
+      "status": "completed",
+      "python_version": "3.11.2",
+      "numpy_version": "1.24.2",
+      "pandas_version": "1.5.3",
+      "basic_computation": true
+    },
+    "phase2": {
+      "status": "completed",
+      "data_shape": {
+        "returns": [
+          252,
+          50
+        ],
+        "prices": [
+          252,
+          50
+        ],
+        "features": [
+          252,
+          50,
+          10
+        ]
+      },
+      "statistics": {
+        "returns_mean": -0.0001879898663547247,
+        "returns_std": 0.022513158666005038,
+        "price_ratio": 17.744907375025242
+      }
+    },
+    "phase3": {
+      "status": "completed",
+      "strategies_tested": 5,
+      "strategy_performances": {
+        "momentum_5d": {
+          "sharpe_ratio": 0.9405892421775297,
+          "max_drawdown": 0.030710760220043543,
+          "win_rate": 0.4900398406374502,
+          "annual_return": 0.04764801498728524,
+          "annual_volatility": 0.05065762274399053
+        },
+        "mean_reversion_20d": {
+          "sharpe_ratio": 1.4668260029931888,
+          "max_drawdown": 0.02259129415991507,
+          "win_rate": 0.4900398406374502,
+          "annual_return": 0.07443355964332275,
+          "annual_volatility": 0.05074464148538031
+        },
+        "volatility_breakout": {
+          "sharpe_ratio": -0.7106322868647744,
+          "max_drawdown": 0.03793744589872668,
+          "win_rate": 0.4940239043824701,
+          "annual_return": -0.019377146985647284,
+          "annual_volatility": 0.027267473408979157
+        },
+        "price_momentum": {
+          "sharpe_ratio": -0.5215371884842649,
+          "max_drawdown": 0.05247385251584614,
+          "win_rate": 0.47410358565737054,
+          "annual_return": -0.024293319573386703,
+          "annual_volatility": 0.04658022497684199
+        },
+        "random_baseline": {
+          "sharpe_ratio": -0.10791790751083724,
+          "max_drawdown": 0.03916666516317575,
+          "win_rate": 0.4940239043824701,
+          "annual_return": -0.004589095720260831,
+          "annual_volatility": 0.04252395015905945
+        }
+      },
+      "best_strategy": "mean_reversion_20d",
+      "best_sharpe_ratio": 1.4668260029931888,
+      "individual_target_achieved": true
+    },
+    "phase4": {
+      "status": "completed",
+      "ensemble_methods_tested": 2,
+      "ensemble_performances": {
+        "equal_weight": {
+          "sharpe_ratio": 0.8814739794362878,
+          "win_rate": 0.5159362549800797,
+          "max_drawdown": 0.02928176118865921,
+          "constituent_strategies": 3
+        },
+        "performance_weighted": {
+          "sharpe_ratio": 1.6568473848617105,
+          "win_rate": 0.5290410933347646,
+          "max_drawdown": 0.022621131415005553,
+          "constituent_strategies": 3
+        }
+      },
+      "best_ensemble_method": "performance_weighted",
+      "best_ensemble_sharpe": 1.6568473848617105,
+      "ensemble_target_achieved": true,
+      "improvement_over_individual": 1.1295459594258392
+    }
+  },
+  "end_time": "2025-07-04T09:52:28.718933",
+  "overall_success": true
+}

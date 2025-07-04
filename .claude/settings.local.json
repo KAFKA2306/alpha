@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(find:*)",
+      "Bash(python3:*)",
+      "Bash(ls:*)",
+      "Bash(python:*)",
+      "mcp__ide__executeCode",
+      "Bash(grep:*)",
+      "Bash(apt-get:*)",
+      "Bash(apt-get install:*)",
+      "Bash(pip3 install:*)",
+      "Bash(pip install:*)",
+      "Bash(streamlit run:*)"
+    ],
+    "deny": []
+  }
+}
