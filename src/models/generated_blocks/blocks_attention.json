@@ -1,0 +1,308 @@
+[
+  {
+    "name": "hierarchical_temporal_attention",
+    "category": "attention",
+    "description": "hierarchical attention mechanism for temporal modeling",
+    "parameters": {
+      "attention_type": "hierarchical",
+      "scope": "temporal",
+      "num_heads": 4,
+      "attention_dropout": 0.1
+    },
+    "complexity": "medium",
+    "components": [
+      "attention_weights",
+      "key_value_query",
+      "attention_pooling"
+    ],
+    "template_name": "{attention_type}_{scope}_attention"
+  },
+  {
+    "name": "global_temporal_attention",
+    "category": "attention",
+    "description": "global attention mechanism for temporal modeling",
+    "parameters": {
+      "attention_type": "global",
+      "scope": "temporal",
+      "num_heads": 4,
+      "attention_dropout": 0.3
+    },
+    "complexity": "medium",
+    "components": [
+      "attention_weights",
+      "key_value_query",
+      "attention_pooling"
+    ],
+    "template_name": "{attention_type}_{scope}_attention"
+  },
+  {
+    "name": "global_multi_scale_attention",
+    "category": "attention",
+    "description": "global attention mechanism for multi_scale modeling",
+    "parameters": {
+      "attention_type": "global",
+      "scope": "multi_scale",
+      "num_heads": 16,
+      "attention_dropout": 0.1
+    },
+    "complexity": "complex",
+    "components": [
+      "attention_weights",
+      "key_value_query",
+      "attention_pooling"
+    ],
+    "template_name": "{attention_type}_{scope}_attention"
+  },
+  {
+    "name": "local_multi_scale_attention",
+    "category": "attention",
+    "description": "local attention mechanism for multi_scale modeling",
+    "parameters": {
+      "attention_type": "local",
+      "scope": "multi_scale",
+      "num_heads": 4,
+      "attention_dropout": 0.1
+    },
+    "complexity": "complex",
+    "components": [
+      "attention_weights",
+      "key_value_query",
+      "attention_pooling"
+    ],
+    "template_name": "{attention_type}_{scope}_attention"
+  },
+  {
+    "name": "global_temporal_attention",
+    "category": "attention",
+    "description": "global attention mechanism for temporal modeling",
+    "parameters": {
+      "attention_type": "global",
+      "scope": "temporal",
+      "num_heads": 4,
+      "attention_dropout": 0.2
+    },
+    "complexity": "medium",
+    "components": [
+      "attention_weights",
+      "key_value_query",
+      "attention_pooling"
+    ],
+    "template_name": "{attention_type}_{scope}_attention"
+  },
+  {
+    "name": "multi_head_temporal_attention",
+    "category": "attention",
+    "description": "multi_head attention mechanism for temporal modeling",
+    "parameters": {
+      "attention_type": "multi_head",
+      "scope": "temporal",
+      "num_heads": 8,
+      "attention_dropout": 0.3
+    },
+    "complexity": "medium",
+    "components": [
+      "attention_weights",
+      "key_value_query",
+      "attention_pooling"
+    ],
+    "template_name": "{attention_type}_{scope}_attention"
+  },
+  {
+    "name": "adaptive_feature_attention",
+    "category": "attention",
+    "description": "adaptive attention mechanism for feature modeling",
+    "parameters": {
+      "attention_type": "adaptive",
+      "scope": "feature",
+      "num_heads": 16,
+      "attention_dropout": 0.2
+    },
+    "complexity": "medium",
+    "components": [
+      "attention_weights",
+      "key_value_query",
+      "attention_pooling"
+    ],
+    "template_name": "{attention_type}_{scope}_attention"
+  },
+  {
+    "name": "local_cross_sectional_attention",
+    "category": "attention",
+    "description": "local attention mechanism for cross_sectional modeling",
+    "parameters": {
+      "attention_type": "local",
+      "scope": "cross_sectional",
+      "num_heads": 32,
+      "attention_dropout": 0.2
+    },
+    "complexity": "medium",
+    "components": [
+      "attention_weights",
+      "key_value_query",
+      "attention_pooling"
+    ],
+    "template_name": "{attention_type}_{scope}_attention"
+  },
+  {
+    "name": "hierarchical_temporal_attention",
+    "category": "attention",
+    "description": "hierarchical attention mechanism for temporal modeling",
+    "parameters": {
+      "attention_type": "hierarchical",
+      "scope": "temporal",
+      "num_heads": 16,
+      "attention_dropout": 0.3
+    },
+    "complexity": "complex",
+    "components": [
+      "attention_weights",
+      "key_value_query",
+      "attention_pooling"
+    ],
+    "template_name": "{attention_type}_{scope}_attention"
+  },
+  {
+    "name": "hierarchical_cross_sectional_attention",
+    "category": "attention",
+    "description": "hierarchical attention mechanism for cross_sectional modeling",
+    "parameters": {
+      "attention_type": "hierarchical",
+      "scope": "cross_sectional",
+      "num_heads": 8,
+      "attention_dropout": 0.2
+    },
+    "complexity": "complex",
+    "components": [
+      "attention_weights",
+      "key_value_query",
+      "attention_pooling"
+    ],
+    "template_name": "{attention_type}_{scope}_attention"
+  },
+  {
+    "name": "local_feature_attention",
+    "category": "attention",
+    "description": "local attention mechanism for feature modeling",
+    "parameters": {
+      "attention_type": "local",
+      "scope": "feature",
+      "num_heads": 8,
+      "attention_dropout": 0.1
+    },
+    "complexity": "simple",
+    "components": [
+      "attention_weights",
+      "key_value_query",
+      "attention_pooling"
+    ],
+    "template_name": "{attention_type}_{scope}_attention"
+  },
+  {
+    "name": "sparse_temporal_attention",
+    "category": "attention",
+    "description": "sparse attention mechanism for temporal modeling",
+    "parameters": {
+      "attention_type": "sparse",
+      "scope": "temporal",
+      "num_heads": 4,
+      "attention_dropout": 0.1
+    },
+    "complexity": "medium",
+    "components": [
+      "attention_weights",
+      "key_value_query",
+      "attention_pooling"
+    ],
+    "template_name": "{attention_type}_{scope}_attention"
+  },
+  {
+    "name": "adaptive_feature_attention",
+    "category": "attention",
+    "description": "adaptive attention mechanism for feature modeling",
+    "parameters": {
+      "attention_type": "adaptive",
+      "scope": "feature",
+      "num_heads": 4,
+      "attention_dropout": 0.1
+    },
+    "complexity": "simple",
+    "components": [
+      "attention_weights",
+      "key_value_query",
+      "attention_pooling"
+    ],
+    "template_name": "{attention_type}_{scope}_attention"
+  },
+  {
+    "name": "local_multi_scale_attention",
+    "category": "attention",
+    "description": "local attention mechanism for multi_scale modeling",
+    "parameters": {
+      "attention_type": "local",
+      "scope": "multi_scale",
+      "num_heads": 8,
+      "attention_dropout": 0.3
+    },
+    "complexity": "complex",
+    "components": [
+      "attention_weights",
+      "key_value_query",
+      "attention_pooling"
+    ],
+    "template_name": "{attention_type}_{scope}_attention"
+  },
+  {
+    "name": "global_multi_scale_attention",
+    "category": "attention",
+    "description": "global attention mechanism for multi_scale modeling",
+    "parameters": {
+      "attention_type": "global",
+      "scope": "multi_scale",
+      "num_heads": 8,
+      "attention_dropout": 0.1
+    },
+    "complexity": "medium",
+    "components": [
+      "attention_weights",
+      "key_value_query",
+      "attention_pooling"
+    ],
+    "template_name": "{attention_type}_{scope}_attention"
+  },
+  {
+    "name": "multi_head_multi_scale_attention",
+    "category": "attention",
+    "description": "multi_head attention mechanism for multi_scale modeling",
+    "parameters": {
+      "attention_type": "multi_head",
+      "scope": "multi_scale",
+      "num_heads": 32,
+      "attention_dropout": 0.3
+    },
+    "complexity": "medium",
+    "components": [
+      "attention_weights",
+      "key_value_query",
+      "attention_pooling"
+    ],
+    "template_name": "{attention_type}_{scope}_attention"
+  },
+  {
+    "name": "sparse_cross_sectional_attention",
+    "category": "attention",
+    "description": "sparse attention mechanism for cross_sectional modeling",
+    "parameters": {
+      "attention_type": "sparse",
+      "scope": "cross_sectional",
+      "num_heads": 4,
+      "attention_dropout": 0.2
+    },
+    "complexity": "simple",
+    "components": [
+      "attention_weights",
+      "key_value_query",
+      "attention_pooling"
+    ],
+    "template_name": "{attention_type}_{scope}_attention"
+  }
+]

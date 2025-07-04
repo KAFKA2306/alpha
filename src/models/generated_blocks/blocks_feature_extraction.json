@@ -1,0 +1,524 @@
+[
+  {
+    "name": "statistical_dictionary_learning_feature",
+    "category": "feature_extraction",
+    "description": "Extract statistical features using dictionary_learning decomposition",
+    "parameters": {
+      "domain": "statistical",
+      "method": "dictionary_learning",
+      "n_components": 16,
+      "sparsity_level": 0.7
+    },
+    "complexity": "medium",
+    "components": [
+      "decomposition",
+      "feature_selection",
+      "dimensionality_reduction"
+    ],
+    "template_name": "{domain}_{method}_feature"
+  },
+  {
+    "name": "seasonal_signal_decomp",
+    "category": "feature_extraction",
+    "description": "Decompose seasonal signals into interpretable components",
+    "parameters": {
+      "signal_type": "seasonal",
+      "decomposition_method": "ceemdan",
+      "n_modes": 3,
+      "noise_threshold": 0.1
+    },
+    "complexity": "medium",
+    "components": [
+      "signal_processing",
+      "basis_functions",
+      "component_analysis"
+    ],
+    "template_name": "{signal_type}_signal_decomp"
+  },
+  {
+    "name": "trend_signal_decomp",
+    "category": "feature_extraction",
+    "description": "Decompose trend signals into interpretable components",
+    "parameters": {
+      "signal_type": "trend",
+      "decomposition_method": "ceemdan",
+      "n_modes": 3,
+      "noise_threshold": 0.1
+    },
+    "complexity": "medium",
+    "components": [
+      "signal_processing",
+      "basis_functions",
+      "component_analysis"
+    ],
+    "template_name": "{signal_type}_signal_decomp"
+  },
+  {
+    "name": "seasonal_signal_decomp",
+    "category": "feature_extraction",
+    "description": "Decompose seasonal signals into interpretable components",
+    "parameters": {
+      "signal_type": "seasonal",
+      "decomposition_method": "ssa",
+      "n_modes": 7,
+      "noise_threshold": 0.01
+    },
+    "complexity": "medium",
+    "components": [
+      "signal_processing",
+      "basis_functions",
+      "component_analysis"
+    ],
+    "template_name": "{signal_type}_signal_decomp"
+  },
+  {
+    "name": "wavelet_manifold_learning_feature",
+    "category": "feature_extraction",
+    "description": "Extract wavelet features using manifold_learning decomposition",
+    "parameters": {
+      "domain": "wavelet",
+      "method": "manifold_learning",
+      "n_components": 16,
+      "sparsity_level": 0.3
+    },
+    "complexity": "complex",
+    "components": [
+      "decomposition",
+      "feature_selection",
+      "dimensionality_reduction"
+    ],
+    "template_name": "{domain}_{method}_feature"
+  },
+  {
+    "name": "cyclical_signal_decomp",
+    "category": "feature_extraction",
+    "description": "Decompose cyclical signals into interpretable components",
+    "parameters": {
+      "signal_type": "cyclical",
+      "decomposition_method": "vmd",
+      "n_modes": 10,
+      "noise_threshold": 0.01
+    },
+    "complexity": "medium",
+    "components": [
+      "signal_processing",
+      "basis_functions",
+      "component_analysis"
+    ],
+    "template_name": "{signal_type}_signal_decomp"
+  },
+  {
+    "name": "volatility_signal_decomp",
+    "category": "feature_extraction",
+    "description": "Decompose volatility signals into interpretable components",
+    "parameters": {
+      "signal_type": "volatility",
+      "decomposition_method": "emd",
+      "n_modes": 3,
+      "noise_threshold": 0.01
+    },
+    "complexity": "complex",
+    "components": [
+      "signal_processing",
+      "basis_functions",
+      "component_analysis"
+    ],
+    "template_name": "{signal_type}_signal_decomp"
+  },
+  {
+    "name": "geometric_sparse_coding_feature",
+    "category": "feature_extraction",
+    "description": "Extract geometric features using sparse_coding decomposition",
+    "parameters": {
+      "domain": "geometric",
+      "method": "sparse_coding",
+      "n_components": 16,
+      "sparsity_level": 0.3
+    },
+    "complexity": "complex",
+    "components": [
+      "decomposition",
+      "feature_selection",
+      "dimensionality_reduction"
+    ],
+    "template_name": "{domain}_{method}_feature"
+  },
+  {
+    "name": "geometric_dictionary_learning_feature",
+    "category": "feature_extraction",
+    "description": "Extract geometric features using dictionary_learning decomposition",
+    "parameters": {
+      "domain": "geometric",
+      "method": "dictionary_learning",
+      "n_components": 16,
+      "sparsity_level": 0.7
+    },
+    "complexity": "complex",
+    "components": [
+      "decomposition",
+      "feature_selection",
+      "dimensionality_reduction"
+    ],
+    "template_name": "{domain}_{method}_feature"
+  },
+  {
+    "name": "noise_signal_decomp",
+    "category": "feature_extraction",
+    "description": "Decompose noise signals into interpretable components",
+    "parameters": {
+      "signal_type": "noise",
+      "decomposition_method": "eemd",
+      "n_modes": 10,
+      "noise_threshold": 0.1
+    },
+    "complexity": "medium",
+    "components": [
+      "signal_processing",
+      "basis_functions",
+      "component_analysis"
+    ],
+    "template_name": "{signal_type}_signal_decomp"
+  },
+  {
+    "name": "spectral_sparse_coding_feature",
+    "category": "feature_extraction",
+    "description": "Extract spectral features using sparse_coding decomposition",
+    "parameters": {
+      "domain": "spectral",
+      "method": "sparse_coding",
+      "n_components": 16,
+      "sparsity_level": 0.1
+    },
+    "complexity": "medium",
+    "components": [
+      "decomposition",
+      "feature_selection",
+      "dimensionality_reduction"
+    ],
+    "template_name": "{domain}_{method}_feature"
+  },
+  {
+    "name": "trend_signal_decomp",
+    "category": "feature_extraction",
+    "description": "Decompose trend signals into interpretable components",
+    "parameters": {
+      "signal_type": "trend",
+      "decomposition_method": "eemd",
+      "n_modes": 5,
+      "noise_threshold": 0.01
+    },
+    "complexity": "medium",
+    "components": [
+      "signal_processing",
+      "basis_functions",
+      "component_analysis"
+    ],
+    "template_name": "{signal_type}_signal_decomp"
+  },
+  {
+    "name": "volatility_signal_decomp",
+    "category": "feature_extraction",
+    "description": "Decompose volatility signals into interpretable components",
+    "parameters": {
+      "signal_type": "volatility",
+      "decomposition_method": "ceemdan",
+      "n_modes": 10,
+      "noise_threshold": 0.1
+    },
+    "complexity": "simple",
+    "components": [
+      "signal_processing",
+      "basis_functions",
+      "component_analysis"
+    ],
+    "template_name": "{signal_type}_signal_decomp"
+  },
+  {
+    "name": "statistical_dictionary_learning_feature",
+    "category": "feature_extraction",
+    "description": "Extract statistical features using dictionary_learning decomposition",
+    "parameters": {
+      "domain": "statistical",
+      "method": "dictionary_learning",
+      "n_components": 64,
+      "sparsity_level": 0.3
+    },
+    "complexity": "medium",
+    "components": [
+      "decomposition",
+      "feature_selection",
+      "dimensionality_reduction"
+    ],
+    "template_name": "{domain}_{method}_feature"
+  },
+  {
+    "name": "noise_signal_decomp",
+    "category": "feature_extraction",
+    "description": "Decompose noise signals into interpretable components",
+    "parameters": {
+      "signal_type": "noise",
+      "decomposition_method": "vmd",
+      "n_modes": 7,
+      "noise_threshold": 0.01
+    },
+    "complexity": "medium",
+    "components": [
+      "signal_processing",
+      "basis_functions",
+      "component_analysis"
+    ],
+    "template_name": "{signal_type}_signal_decomp"
+  },
+  {
+    "name": "statistical_basis_pursuit_feature",
+    "category": "feature_extraction",
+    "description": "Extract statistical features using basis_pursuit decomposition",
+    "parameters": {
+      "domain": "statistical",
+      "method": "basis_pursuit",
+      "n_components": 64,
+      "sparsity_level": 0.5
+    },
+    "complexity": "complex",
+    "components": [
+      "decomposition",
+      "feature_selection",
+      "dimensionality_reduction"
+    ],
+    "template_name": "{domain}_{method}_feature"
+  },
+  {
+    "name": "geometric_sparse_coding_feature",
+    "category": "feature_extraction",
+    "description": "Extract geometric features using sparse_coding decomposition",
+    "parameters": {
+      "domain": "geometric",
+      "method": "sparse_coding",
+      "n_components": 128,
+      "sparsity_level": 0.1
+    },
+    "complexity": "medium",
+    "components": [
+      "decomposition",
+      "feature_selection",
+      "dimensionality_reduction"
+    ],
+    "template_name": "{domain}_{method}_feature"
+  },
+  {
+    "name": "volatility_signal_decomp",
+    "category": "feature_extraction",
+    "description": "Decompose volatility signals into interpretable components",
+    "parameters": {
+      "signal_type": "volatility",
+      "decomposition_method": "ssa",
+      "n_modes": 7,
+      "noise_threshold": 0.1
+    },
+    "complexity": "medium",
+    "components": [
+      "signal_processing",
+      "basis_functions",
+      "component_analysis"
+    ],
+    "template_name": "{signal_type}_signal_decomp"
+  },
+  {
+    "name": "statistical_basis_pursuit_feature",
+    "category": "feature_extraction",
+    "description": "Extract statistical features using basis_pursuit decomposition",
+    "parameters": {
+      "domain": "statistical",
+      "method": "basis_pursuit",
+      "n_components": 8,
+      "sparsity_level": 0.3
+    },
+    "complexity": "complex",
+    "components": [
+      "decomposition",
+      "feature_selection",
+      "dimensionality_reduction"
+    ],
+    "template_name": "{domain}_{method}_feature"
+  },
+  {
+    "name": "geometric_sparse_coding_feature",
+    "category": "feature_extraction",
+    "description": "Extract geometric features using sparse_coding decomposition",
+    "parameters": {
+      "domain": "geometric",
+      "method": "sparse_coding",
+      "n_components": 16,
+      "sparsity_level": 0.7
+    },
+    "complexity": "simple",
+    "components": [
+      "decomposition",
+      "feature_selection",
+      "dimensionality_reduction"
+    ],
+    "template_name": "{domain}_{method}_feature"
+  },
+  {
+    "name": "spectral_basis_pursuit_feature",
+    "category": "feature_extraction",
+    "description": "Extract spectral features using basis_pursuit decomposition",
+    "parameters": {
+      "domain": "spectral",
+      "method": "basis_pursuit",
+      "n_components": 32,
+      "sparsity_level": 0.1
+    },
+    "complexity": "complex",
+    "components": [
+      "decomposition",
+      "feature_selection",
+      "dimensionality_reduction"
+    ],
+    "template_name": "{domain}_{method}_feature"
+  },
+  {
+    "name": "wavelet_basis_pursuit_feature",
+    "category": "feature_extraction",
+    "description": "Extract wavelet features using basis_pursuit decomposition",
+    "parameters": {
+      "domain": "wavelet",
+      "method": "basis_pursuit",
+      "n_components": 32,
+      "sparsity_level": 0.1
+    },
+    "complexity": "medium",
+    "components": [
+      "decomposition",
+      "feature_selection",
+      "dimensionality_reduction"
+    ],
+    "template_name": "{domain}_{method}_feature"
+  },
+  {
+    "name": "geometric_dictionary_learning_feature",
+    "category": "feature_extraction",
+    "description": "Extract geometric features using dictionary_learning decomposition",
+    "parameters": {
+      "domain": "geometric",
+      "method": "dictionary_learning",
+      "n_components": 128,
+      "sparsity_level": 0.7
+    },
+    "complexity": "complex",
+    "components": [
+      "decomposition",
+      "feature_selection",
+      "dimensionality_reduction"
+    ],
+    "template_name": "{domain}_{method}_feature"
+  },
+  {
+    "name": "topological_manifold_learning_feature",
+    "category": "feature_extraction",
+    "description": "Extract topological features using manifold_learning decomposition",
+    "parameters": {
+      "domain": "topological",
+      "method": "manifold_learning",
+      "n_components": 32,
+      "sparsity_level": 0.5
+    },
+    "complexity": "medium",
+    "components": [
+      "decomposition",
+      "feature_selection",
+      "dimensionality_reduction"
+    ],
+    "template_name": "{domain}_{method}_feature"
+  },
+  {
+    "name": "cyclical_signal_decomp",
+    "category": "feature_extraction",
+    "description": "Decompose cyclical signals into interpretable components",
+    "parameters": {
+      "signal_type": "cyclical",
+      "decomposition_method": "eemd",
+      "n_modes": 10,
+      "noise_threshold": 0.1
+    },
+    "complexity": "complex",
+    "components": [
+      "signal_processing",
+      "basis_functions",
+      "component_analysis"
+    ],
+    "template_name": "{signal_type}_signal_decomp"
+  },
+  {
+    "name": "wavelet_dictionary_learning_feature",
+    "category": "feature_extraction",
+    "description": "Extract wavelet features using dictionary_learning decomposition",
+    "parameters": {
+      "domain": "wavelet",
+      "method": "dictionary_learning",
+      "n_components": 32,
+      "sparsity_level": 0.3
+    },
+    "complexity": "medium",
+    "components": [
+      "decomposition",
+      "feature_selection",
+      "dimensionality_reduction"
+    ],
+    "template_name": "{domain}_{method}_feature"
+  },
+  {
+    "name": "statistical_manifold_learning_feature",
+    "category": "feature_extraction",
+    "description": "Extract statistical features using manifold_learning decomposition",
+    "parameters": {
+      "domain": "statistical",
+      "method": "manifold_learning",
+      "n_components": 32,
+      "sparsity_level": 0.7
+    },
+    "complexity": "medium",
+    "components": [
+      "decomposition",
+      "feature_selection",
+      "dimensionality_reduction"
+    ],
+    "template_name": "{domain}_{method}_feature"
+  },
+  {
+    "name": "statistical_basis_pursuit_feature",
+    "category": "feature_extraction",
+    "description": "Extract statistical features using basis_pursuit decomposition",
+    "parameters": {
+      "domain": "statistical",
+      "method": "basis_pursuit",
+      "n_components": 32,
+      "sparsity_level": 0.1
+    },
+    "complexity": "complex",
+    "components": [
+      "decomposition",
+      "feature_selection",
+      "dimensionality_reduction"
+    ],
+    "template_name": "{domain}_{method}_feature"
+  },
+  {
+    "name": "geometric_sparse_coding_feature",
+    "category": "feature_extraction",
+    "description": "Extract geometric features using sparse_coding decomposition",
+    "parameters": {
+      "domain": "geometric",
+      "method": "sparse_coding",
+      "n_components": 128,
+      "sparsity_level": 0.7
+    },
+    "complexity": "medium",
+    "components": [
+      "decomposition",
+      "feature_selection",
+      "dimensionality_reduction"
+    ],
+    "template_name": "{domain}_{method}_feature"
+  }
+]

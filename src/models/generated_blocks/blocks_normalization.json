@@ -1,0 +1,223 @@
+[
+  {
+    "name": "attention_weighted_adaptive_norm",
+    "category": "normalization",
+    "description": "Adaptive normalization with attention_weighted adjustment mechanism",
+    "parameters": {
+      "adaptive_type": "attention_weighted",
+      "adaptation_rate": 0.01,
+      "context_window": 50
+    },
+    "complexity": "complex",
+    "components": [
+      "adaptive_scaling",
+      "learned_parameters",
+      "context_aware"
+    ],
+    "template_name": "{adaptive_type}_adaptive_norm"
+  },
+  {
+    "name": "adaptive_temporal_norm",
+    "category": "normalization",
+    "description": "adaptive normalization applied to temporal for stabilization",
+    "parameters": {
+      "normalization_type": "adaptive",
+      "scope": "temporal",
+      "purpose": "stabilization"
+    },
+    "complexity": "medium",
+    "components": [
+      "normalization",
+      "scaling",
+      "centering"
+    ],
+    "template_name": "{normalization_type}_{scope}_norm"
+  },
+  {
+    "name": "robust_cross_sectional_norm",
+    "category": "normalization",
+    "description": "robust normalization applied to cross_sectional for regularization",
+    "parameters": {
+      "normalization_type": "robust",
+      "scope": "cross_sectional",
+      "purpose": "regularization"
+    },
+    "complexity": "medium",
+    "components": [
+      "normalization",
+      "scaling",
+      "centering"
+    ],
+    "template_name": "{normalization_type}_{scope}_norm"
+  },
+  {
+    "name": "quantile_temporal_norm",
+    "category": "normalization",
+    "description": "quantile normalization applied to temporal for feature_enhancement",
+    "parameters": {
+      "normalization_type": "quantile",
+      "scope": "temporal",
+      "purpose": "feature_enhancement"
+    },
+    "complexity": "simple",
+    "components": [
+      "normalization",
+      "scaling",
+      "centering"
+    ],
+    "template_name": "{normalization_type}_{scope}_norm"
+  },
+  {
+    "name": "momentum_adjusted_adaptive_norm",
+    "category": "normalization",
+    "description": "Adaptive normalization with momentum_adjusted adjustment mechanism",
+    "parameters": {
+      "adaptive_type": "momentum_adjusted",
+      "adaptation_rate": 0.2,
+      "context_window": 10
+    },
+    "complexity": "complex",
+    "components": [
+      "adaptive_scaling",
+      "learned_parameters",
+      "context_aware"
+    ],
+    "template_name": "{adaptive_type}_adaptive_norm"
+  },
+  {
+    "name": "running_spatial_norm",
+    "category": "normalization",
+    "description": "running normalization applied to spatial for stabilization",
+    "parameters": {
+      "normalization_type": "running",
+      "scope": "spatial",
+      "purpose": "stabilization"
+    },
+    "complexity": "simple",
+    "components": [
+      "normalization",
+      "scaling",
+      "centering"
+    ],
+    "template_name": "{normalization_type}_{scope}_norm"
+  },
+  {
+    "name": "robust_cross_sectional_norm",
+    "category": "normalization",
+    "description": "robust normalization applied to cross_sectional for feature_enhancement",
+    "parameters": {
+      "normalization_type": "robust",
+      "scope": "cross_sectional",
+      "purpose": "feature_enhancement"
+    },
+    "complexity": "medium",
+    "components": [
+      "normalization",
+      "scaling",
+      "centering"
+    ],
+    "template_name": "{normalization_type}_{scope}_norm"
+  },
+  {
+    "name": "quantile_feature_norm",
+    "category": "normalization",
+    "description": "quantile normalization applied to feature for regularization",
+    "parameters": {
+      "normalization_type": "quantile",
+      "scope": "feature",
+      "purpose": "regularization"
+    },
+    "complexity": "medium",
+    "components": [
+      "normalization",
+      "scaling",
+      "centering"
+    ],
+    "template_name": "{normalization_type}_{scope}_norm"
+  },
+  {
+    "name": "spectral_spatial_norm",
+    "category": "normalization",
+    "description": "spectral normalization applied to spatial for feature_enhancement",
+    "parameters": {
+      "normalization_type": "spectral",
+      "scope": "spatial",
+      "purpose": "feature_enhancement"
+    },
+    "complexity": "medium",
+    "components": [
+      "normalization",
+      "scaling",
+      "centering"
+    ],
+    "template_name": "{normalization_type}_{scope}_norm"
+  },
+  {
+    "name": "exponential_channel_norm",
+    "category": "normalization",
+    "description": "exponential normalization applied to channel for regularization",
+    "parameters": {
+      "normalization_type": "exponential",
+      "scope": "channel",
+      "purpose": "regularization"
+    },
+    "complexity": "medium",
+    "components": [
+      "normalization",
+      "scaling",
+      "centering"
+    ],
+    "template_name": "{normalization_type}_{scope}_norm"
+  },
+  {
+    "name": "running_feature_norm",
+    "category": "normalization",
+    "description": "running normalization applied to feature for regularization",
+    "parameters": {
+      "normalization_type": "running",
+      "scope": "feature",
+      "purpose": "regularization"
+    },
+    "complexity": "medium",
+    "components": [
+      "normalization",
+      "scaling",
+      "centering"
+    ],
+    "template_name": "{normalization_type}_{scope}_norm"
+  },
+  {
+    "name": "attention_weighted_adaptive_norm",
+    "category": "normalization",
+    "description": "Adaptive normalization with attention_weighted adjustment mechanism",
+    "parameters": {
+      "adaptive_type": "attention_weighted",
+      "adaptation_rate": 0.05,
+      "context_window": 5
+    },
+    "complexity": "complex",
+    "components": [
+      "adaptive_scaling",
+      "learned_parameters",
+      "context_aware"
+    ],
+    "template_name": "{adaptive_type}_adaptive_norm"
+  },
+  {
+    "name": "exponential_temporal_norm",
+    "category": "normalization",
+    "description": "exponential normalization applied to temporal for feature_enhancement",
+    "parameters": {
+      "normalization_type": "exponential",
+      "scope": "temporal",
+      "purpose": "feature_enhancement"
+    },
+    "complexity": "medium",
+    "components": [
+      "normalization",
+      "scaling",
+      "centering"
+    ],
+    "template_name": "{normalization_type}_{scope}_norm"
+  }
+]

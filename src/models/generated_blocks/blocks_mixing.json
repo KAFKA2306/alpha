@@ -1,0 +1,362 @@
+[
+  {
+    "name": "graph_multi_scale_mixing",
+    "category": "mixing",
+    "description": "Mix information across multi_scale using graph mechanism",
+    "parameters": {
+      "mixing_type": "graph",
+      "domain": "multi_scale",
+      "mixing_ratio": 0.8,
+      "interaction_depth": 2
+    },
+    "complexity": "medium",
+    "components": [
+      "information_mixing",
+      "cross_connections",
+      "feature_interaction"
+    ],
+    "template_name": "{mixing_type}_{domain}_mixing"
+  },
+  {
+    "name": "graph_neural_cross_mixing",
+    "category": "mixing",
+    "description": "Cross-domain mixing using graph_neural architecture",
+    "parameters": {
+      "architecture": "graph_neural",
+      "num_heads": 8,
+      "mixing_layers": 4,
+      "attention_type": "multiplicative"
+    },
+    "complexity": "complex",
+    "components": [
+      "cross_attention",
+      "multi_head_interaction",
+      "hierarchical_mixing"
+    ],
+    "template_name": "{architecture}_cross_mixing"
+  },
+  {
+    "name": "capsule_cross_mixing",
+    "category": "mixing",
+    "description": "Cross-domain mixing using capsule architecture",
+    "parameters": {
+      "architecture": "capsule",
+      "num_heads": 4,
+      "mixing_layers": 3,
+      "attention_type": "scaled_dot"
+    },
+    "complexity": "complex",
+    "components": [
+      "cross_attention",
+      "multi_head_interaction",
+      "hierarchical_mixing"
+    ],
+    "template_name": "{architecture}_cross_mixing"
+  },
+  {
+    "name": "capsule_cross_mixing",
+    "category": "mixing",
+    "description": "Cross-domain mixing using capsule architecture",
+    "parameters": {
+      "architecture": "capsule",
+      "num_heads": 4,
+      "mixing_layers": 4,
+      "attention_type": "multiplicative"
+    },
+    "complexity": "complex",
+    "components": [
+      "cross_attention",
+      "multi_head_interaction",
+      "hierarchical_mixing"
+    ],
+    "template_name": "{architecture}_cross_mixing"
+  },
+  {
+    "name": "convolution_multi_scale_mixing",
+    "category": "mixing",
+    "description": "Mix information across multi_scale using convolution mechanism",
+    "parameters": {
+      "mixing_type": "convolution",
+      "domain": "multi_scale",
+      "mixing_ratio": 0.8,
+      "interaction_depth": 2
+    },
+    "complexity": "medium",
+    "components": [
+      "information_mixing",
+      "cross_connections",
+      "feature_interaction"
+    ],
+    "template_name": "{mixing_type}_{domain}_mixing"
+  },
+  {
+    "name": "capsule_cross_mixing",
+    "category": "mixing",
+    "description": "Cross-domain mixing using capsule architecture",
+    "parameters": {
+      "architecture": "capsule",
+      "num_heads": 4,
+      "mixing_layers": 3,
+      "attention_type": "additive"
+    },
+    "complexity": "complex",
+    "components": [
+      "cross_attention",
+      "multi_head_interaction",
+      "hierarchical_mixing"
+    ],
+    "template_name": "{architecture}_cross_mixing"
+  },
+  {
+    "name": "convolution_temporal_mixing",
+    "category": "mixing",
+    "description": "Mix information across temporal using convolution mechanism",
+    "parameters": {
+      "mixing_type": "convolution",
+      "domain": "temporal",
+      "mixing_ratio": 0.8,
+      "interaction_depth": 2
+    },
+    "complexity": "medium",
+    "components": [
+      "information_mixing",
+      "cross_connections",
+      "feature_interaction"
+    ],
+    "template_name": "{mixing_type}_{domain}_mixing"
+  },
+  {
+    "name": "gated_multi_scale_mixing",
+    "category": "mixing",
+    "description": "Mix information across multi_scale using gated mechanism",
+    "parameters": {
+      "mixing_type": "gated",
+      "domain": "multi_scale",
+      "mixing_ratio": 0.5,
+      "interaction_depth": 2
+    },
+    "complexity": "simple",
+    "components": [
+      "information_mixing",
+      "cross_connections",
+      "feature_interaction"
+    ],
+    "template_name": "{mixing_type}_{domain}_mixing"
+  },
+  {
+    "name": "graph_neural_cross_mixing",
+    "category": "mixing",
+    "description": "Cross-domain mixing using graph_neural architecture",
+    "parameters": {
+      "architecture": "graph_neural",
+      "num_heads": 8,
+      "mixing_layers": 3,
+      "attention_type": "additive"
+    },
+    "complexity": "complex",
+    "components": [
+      "cross_attention",
+      "multi_head_interaction",
+      "hierarchical_mixing"
+    ],
+    "template_name": "{architecture}_cross_mixing"
+  },
+  {
+    "name": "tensor_network_cross_mixing",
+    "category": "mixing",
+    "description": "Cross-domain mixing using tensor_network architecture",
+    "parameters": {
+      "architecture": "tensor_network",
+      "num_heads": 8,
+      "mixing_layers": 4,
+      "attention_type": "additive"
+    },
+    "complexity": "simple",
+    "components": [
+      "cross_attention",
+      "multi_head_interaction",
+      "hierarchical_mixing"
+    ],
+    "template_name": "{architecture}_cross_mixing"
+  },
+  {
+    "name": "transformer_cross_mixing",
+    "category": "mixing",
+    "description": "Cross-domain mixing using transformer architecture",
+    "parameters": {
+      "architecture": "transformer",
+      "num_heads": 4,
+      "mixing_layers": 4,
+      "attention_type": "scaled_dot"
+    },
+    "complexity": "complex",
+    "components": [
+      "cross_attention",
+      "multi_head_interaction",
+      "hierarchical_mixing"
+    ],
+    "template_name": "{architecture}_cross_mixing"
+  },
+  {
+    "name": "spectral_feature_mixing",
+    "category": "mixing",
+    "description": "Mix information across feature using spectral mechanism",
+    "parameters": {
+      "mixing_type": "spectral",
+      "domain": "feature",
+      "mixing_ratio": 0.8,
+      "interaction_depth": 3
+    },
+    "complexity": "medium",
+    "components": [
+      "information_mixing",
+      "cross_connections",
+      "feature_interaction"
+    ],
+    "template_name": "{mixing_type}_{domain}_mixing"
+  },
+  {
+    "name": "graph_multi_scale_mixing",
+    "category": "mixing",
+    "description": "Mix information across multi_scale using graph mechanism",
+    "parameters": {
+      "mixing_type": "graph",
+      "domain": "multi_scale",
+      "mixing_ratio": 0.5,
+      "interaction_depth": 1
+    },
+    "complexity": "medium",
+    "components": [
+      "information_mixing",
+      "cross_connections",
+      "feature_interaction"
+    ],
+    "template_name": "{mixing_type}_{domain}_mixing"
+  },
+  {
+    "name": "attention_feature_mixing",
+    "category": "mixing",
+    "description": "Mix information across feature using attention mechanism",
+    "parameters": {
+      "mixing_type": "attention",
+      "domain": "feature",
+      "mixing_ratio": 0.2,
+      "interaction_depth": 2
+    },
+    "complexity": "medium",
+    "components": [
+      "information_mixing",
+      "cross_connections",
+      "feature_interaction"
+    ],
+    "template_name": "{mixing_type}_{domain}_mixing"
+  },
+  {
+    "name": "spectral_cross_sectional_mixing",
+    "category": "mixing",
+    "description": "Mix information across cross_sectional using spectral mechanism",
+    "parameters": {
+      "mixing_type": "spectral",
+      "domain": "cross_sectional",
+      "mixing_ratio": 0.2,
+      "interaction_depth": 1
+    },
+    "complexity": "medium",
+    "components": [
+      "information_mixing",
+      "cross_connections",
+      "feature_interaction"
+    ],
+    "template_name": "{mixing_type}_{domain}_mixing"
+  },
+  {
+    "name": "graph_feature_mixing",
+    "category": "mixing",
+    "description": "Mix information across feature using graph mechanism",
+    "parameters": {
+      "mixing_type": "graph",
+      "domain": "feature",
+      "mixing_ratio": 0.2,
+      "interaction_depth": 1
+    },
+    "complexity": "medium",
+    "components": [
+      "information_mixing",
+      "cross_connections",
+      "feature_interaction"
+    ],
+    "template_name": "{mixing_type}_{domain}_mixing"
+  },
+  {
+    "name": "graph_temporal_mixing",
+    "category": "mixing",
+    "description": "Mix information across temporal using graph mechanism",
+    "parameters": {
+      "mixing_type": "graph",
+      "domain": "temporal",
+      "mixing_ratio": 0.5,
+      "interaction_depth": 1
+    },
+    "complexity": "medium",
+    "components": [
+      "information_mixing",
+      "cross_connections",
+      "feature_interaction"
+    ],
+    "template_name": "{mixing_type}_{domain}_mixing"
+  },
+  {
+    "name": "transformer_cross_mixing",
+    "category": "mixing",
+    "description": "Cross-domain mixing using transformer architecture",
+    "parameters": {
+      "architecture": "transformer",
+      "num_heads": 4,
+      "mixing_layers": 3,
+      "attention_type": "multiplicative"
+    },
+    "complexity": "complex",
+    "components": [
+      "cross_attention",
+      "multi_head_interaction",
+      "hierarchical_mixing"
+    ],
+    "template_name": "{architecture}_cross_mixing"
+  },
+  {
+    "name": "convolution_cross_sectional_mixing",
+    "category": "mixing",
+    "description": "Mix information across cross_sectional using convolution mechanism",
+    "parameters": {
+      "mixing_type": "convolution",
+      "domain": "cross_sectional",
+      "mixing_ratio": 0.8,
+      "interaction_depth": 1
+    },
+    "complexity": "medium",
+    "components": [
+      "information_mixing",
+      "cross_connections",
+      "feature_interaction"
+    ],
+    "template_name": "{mixing_type}_{domain}_mixing"
+  },
+  {
+    "name": "gated_feature_mixing",
+    "category": "mixing",
+    "description": "Mix information across feature using gated mechanism",
+    "parameters": {
+      "mixing_type": "gated",
+      "domain": "feature",
+      "mixing_ratio": 0.2,
+      "interaction_depth": 2
+    },
+    "complexity": "medium",
+    "components": [
+      "information_mixing",
+      "cross_connections",
+      "feature_interaction"
+    ],
+    "template_name": "{mixing_type}_{domain}_mixing"
+  }
+]

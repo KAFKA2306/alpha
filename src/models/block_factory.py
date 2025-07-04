@@ -10,8 +10,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
-from .domain_blocks import DomainBlock
-from .block_generation_rules import BlockGenerationRules, BlockCategory, BlockTemplate
+from domain_blocks import DomainBlock
+from block_generation_rules import BlockGenerationRules, BlockCategory, BlockTemplate
 import random
 import math
 from collections import defaultdict

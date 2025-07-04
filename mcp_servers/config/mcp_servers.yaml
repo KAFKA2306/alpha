@@ -1,0 +1,180 @@
+# MCP Servers Configuration for Alpha Architecture Agent
+# Configuration for finance, macro, and alternative data servers
+
+mcp_servers:
+  # Server Manager Configuration
+  manager:
+    enabled: true
+    host: "0.0.0.0"
+    port: 8000
+    log_level: "INFO"
+    metrics_enabled: true
+    health_check_interval: 30
+    
+  # Finance Data Server
+  finance:
+    enabled: true
+    port: 8001
+    
+    # Data Sources
+    data_sources:
+      yahoo_finance:
+        enabled: true
+        rate_limit: 2000  # requests per hour
+        
+      alpha_vantage:
+        enabled: false  # Set to true when API key is available
+        api_key: ${ALPHA_VANTAGE_API_KEY}
+        rate_limit: 500  # requests per day
+        
+      j_quants:
+        enabled: false  # Set to true for Japanese market data
+        api_key: ${JQUANTS_API_KEY}
+        refresh_token: ${JQUANTS_REFRESH_TOKEN}
+        rate_limit: 10000  # requests per day
+    
+    # Caching Configuration
+    cache:
+      duration_minutes: 15
+      max_cache_size_mb: 100
+      
+    # Tool Configuration
+    tools:
+      stock_prices: true
+      technical_indicators: true
+      fundamentals: true
+      market_indices: true
+      stock_screening: true
+      multiple_stocks: true
+      
+  # Macro Economic Data Server
+  macro:
+    enabled: true
+    port: 8002
+    
+    # Data Sources
+    data_sources:
+      fred:
+        enabled: false  # Set to true when API key is available
+        api_key: ${FRED_API_KEY}
+        rate_limit: 120  # requests per minute
+        
+      world_bank:
+        enabled: true
+        base_url: "https://api.worldbank.org/v2"
+        
+      oecd:
+        enabled: true
+        base_url: "https://stats.oecd.org/restsdmx/sdmx.ashx"
+        
+      imf:
+        enabled: true
+        base_url: "http://dataservices.imf.org/REST/SDMX_JSON.svc"
+    
+    # Caching Configuration
+    cache:
+      duration_hours: 24
+      max_cache_size_mb: 50
+      
+    # Tool Configuration
+    tools:
+      economic_indicators: true
+      inflation_data: true
+      interest_rates: true
+      employment_data: true
+      gdp_data: true
+      currency_data: true
+      commodity_data: true
+      
+  # Alternative Data Server
+  alternative:
+    enabled: true
+    port: 8003
+    
+    # Data Sources
+    data_sources:
+      news_api:
+        enabled: false  # Set to true when API key is available
+        api_key: ${NEWS_API_KEY}
+        rate_limit: 1000  # requests per day
+        
+      reddit:
+        enabled: false  # Set to true when credentials are available
+        client_id: ${REDDIT_CLIENT_ID}
+        client_secret: ${REDDIT_CLIENT_SECRET}
+        rate_limit: 60  # requests per minute
+        
+      twitter:
+        enabled: false  # Set to true when bearer token is available
+        bearer_token: ${TWITTER_BEARER_TOKEN}
+        rate_limit: 300  # requests per 15 minutes
+        
+      web_scraping:
+        enabled: true
+        rate_limit: 60  # requests per minute
+        user_agent: "Alpha Architecture Agent/1.0"
+        
+      sentiment_analysis:
+        enabled: true
+        provider: "textblob"  # or "vader", "openai"
+    
+    # Caching Configuration
+    cache:
+      duration_hours: 6
+      max_cache_size_mb: 200
+      
+    # Tool Configuration
+    tools:
+      news_sentiment: true
+      social_media_sentiment: true
+      esg_data: true
+      insider_trading: true
+      earnings_transcripts: true
+      satellite_data: true
+      web_scraping: true
+      patent_data: true
+      supply_chain_data: true
+      
+# Global Configuration
+global:
+  # Rate Limiting
+  rate_limiting:
+    global_requests_per_minute: 100
+    per_client_requests_per_minute: 20
+    
+  # Security
+  security:
+    api_key_rotation: true
+    encryption_at_rest: true
+    audit_logging: true
+    
+  # Monitoring
+  monitoring:
+    prometheus:
+      enabled: true
+      port: 9090
+      metrics_path: "/metrics"
+      
+    health_checks:
+      enabled: true
+      interval_seconds: 30
+      timeout_seconds: 10
+      
+    logging:
+      level: ${MCP_LOG_LEVEL:INFO}
+      format: "structured"
+      file: "logs/mcp_servers.log"
+      max_size_mb: 100
+      max_files: 10
+      
+  # Performance
+  performance:
+    max_concurrent_requests: 50
+    request_timeout_seconds: 30
+    connection_pool_size: 20
+    
+  # Development
+  development:
+    debug_mode: ${DEBUG:false}
+    hot_reload: false
+    profiling: false

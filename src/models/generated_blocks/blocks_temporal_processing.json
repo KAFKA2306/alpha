@@ -1,0 +1,290 @@
+[
+  {
+    "name": "trend_state_space",
+    "category": "temporal_processing",
+    "description": "Process trend patterns using state_space methods",
+    "parameters": {
+      "temporal_pattern": "trend",
+      "processing_type": "state_space",
+      "model_order": 1,
+      "smoothing_parameter": 0.1
+    },
+    "complexity": "complex",
+    "components": [
+      "temporal_modeling",
+      "sequence_analysis",
+      "time_series_decomposition"
+    ],
+    "template_name": "{temporal_pattern}_{processing_type}"
+  },
+  {
+    "name": "trend_hmm",
+    "category": "temporal_processing",
+    "description": "Process trend patterns using hmm methods",
+    "parameters": {
+      "temporal_pattern": "trend",
+      "processing_type": "hmm",
+      "model_order": 5,
+      "smoothing_parameter": 0.3
+    },
+    "complexity": "medium",
+    "components": [
+      "temporal_modeling",
+      "sequence_analysis",
+      "time_series_decomposition"
+    ],
+    "template_name": "{temporal_pattern}_{processing_type}"
+  },
+  {
+    "name": "trend_state_space",
+    "category": "temporal_processing",
+    "description": "Process trend patterns using state_space methods",
+    "parameters": {
+      "temporal_pattern": "trend",
+      "processing_type": "state_space",
+      "model_order": 5,
+      "smoothing_parameter": 0.3
+    },
+    "complexity": "medium",
+    "components": [
+      "temporal_modeling",
+      "sequence_analysis",
+      "time_series_decomposition"
+    ],
+    "template_name": "{temporal_pattern}_{processing_type}"
+  },
+  {
+    "name": "trend_hmm",
+    "category": "temporal_processing",
+    "description": "Process trend patterns using hmm methods",
+    "parameters": {
+      "temporal_pattern": "trend",
+      "processing_type": "hmm",
+      "model_order": 2,
+      "smoothing_parameter": 0.5
+    },
+    "complexity": "complex",
+    "components": [
+      "temporal_modeling",
+      "sequence_analysis",
+      "time_series_decomposition"
+    ],
+    "template_name": "{temporal_pattern}_{processing_type}"
+  },
+  {
+    "name": "structural_break_kalman_filter",
+    "category": "temporal_processing",
+    "description": "Process structural_break patterns using kalman_filter methods",
+    "parameters": {
+      "temporal_pattern": "structural_break",
+      "processing_type": "kalman_filter",
+      "model_order": 1,
+      "smoothing_parameter": 0.7
+    },
+    "complexity": "complex",
+    "components": [
+      "temporal_modeling",
+      "sequence_analysis",
+      "time_series_decomposition"
+    ],
+    "template_name": "{temporal_pattern}_{processing_type}"
+  },
+  {
+    "name": "seasonal_state_space",
+    "category": "temporal_processing",
+    "description": "Process seasonal patterns using state_space methods",
+    "parameters": {
+      "temporal_pattern": "seasonal",
+      "processing_type": "state_space",
+      "model_order": 1,
+      "smoothing_parameter": 0.1
+    },
+    "complexity": "medium",
+    "components": [
+      "temporal_modeling",
+      "sequence_analysis",
+      "time_series_decomposition"
+    ],
+    "template_name": "{temporal_pattern}_{processing_type}"
+  },
+  {
+    "name": "irregular_hmm",
+    "category": "temporal_processing",
+    "description": "Process irregular patterns using hmm methods",
+    "parameters": {
+      "temporal_pattern": "irregular",
+      "processing_type": "hmm",
+      "model_order": 5,
+      "smoothing_parameter": 0.3
+    },
+    "complexity": "medium",
+    "components": [
+      "temporal_modeling",
+      "sequence_analysis",
+      "time_series_decomposition"
+    ],
+    "template_name": "{temporal_pattern}_{processing_type}"
+  },
+  {
+    "name": "seasonal_state_space",
+    "category": "temporal_processing",
+    "description": "Process seasonal patterns using state_space methods",
+    "parameters": {
+      "temporal_pattern": "seasonal",
+      "processing_type": "state_space",
+      "model_order": 2,
+      "smoothing_parameter": 0.5
+    },
+    "complexity": "medium",
+    "components": [
+      "temporal_modeling",
+      "sequence_analysis",
+      "time_series_decomposition"
+    ],
+    "template_name": "{temporal_pattern}_{processing_type}"
+  },
+  {
+    "name": "structural_break_hmm",
+    "category": "temporal_processing",
+    "description": "Process structural_break patterns using hmm methods",
+    "parameters": {
+      "temporal_pattern": "structural_break",
+      "processing_type": "hmm",
+      "model_order": 2,
+      "smoothing_parameter": 0.5
+    },
+    "complexity": "complex",
+    "components": [
+      "temporal_modeling",
+      "sequence_analysis",
+      "time_series_decomposition"
+    ],
+    "template_name": "{temporal_pattern}_{processing_type}"
+  },
+  {
+    "name": "seasonal_kalman_filter",
+    "category": "temporal_processing",
+    "description": "Process seasonal patterns using kalman_filter methods",
+    "parameters": {
+      "temporal_pattern": "seasonal",
+      "processing_type": "kalman_filter",
+      "model_order": 1,
+      "smoothing_parameter": 0.1
+    },
+    "complexity": "complex",
+    "components": [
+      "temporal_modeling",
+      "sequence_analysis",
+      "time_series_decomposition"
+    ],
+    "template_name": "{temporal_pattern}_{processing_type}"
+  },
+  {
+    "name": "trend_hmm",
+    "category": "temporal_processing",
+    "description": "Process trend patterns using hmm methods",
+    "parameters": {
+      "temporal_pattern": "trend",
+      "processing_type": "hmm",
+      "model_order": 1,
+      "smoothing_parameter": 0.1
+    },
+    "complexity": "complex",
+    "components": [
+      "temporal_modeling",
+      "sequence_analysis",
+      "time_series_decomposition"
+    ],
+    "template_name": "{temporal_pattern}_{processing_type}"
+  },
+  {
+    "name": "cyclical_particle_filter",
+    "category": "temporal_processing",
+    "description": "Process cyclical patterns using particle_filter methods",
+    "parameters": {
+      "temporal_pattern": "cyclical",
+      "processing_type": "particle_filter",
+      "model_order": 3,
+      "smoothing_parameter": 0.5
+    },
+    "complexity": "medium",
+    "components": [
+      "temporal_modeling",
+      "sequence_analysis",
+      "time_series_decomposition"
+    ],
+    "template_name": "{temporal_pattern}_{processing_type}"
+  },
+  {
+    "name": "trend_hmm",
+    "category": "temporal_processing",
+    "description": "Process trend patterns using hmm methods",
+    "parameters": {
+      "temporal_pattern": "trend",
+      "processing_type": "hmm",
+      "model_order": 2,
+      "smoothing_parameter": 0.7
+    },
+    "complexity": "medium",
+    "components": [
+      "temporal_modeling",
+      "sequence_analysis",
+      "time_series_decomposition"
+    ],
+    "template_name": "{temporal_pattern}_{processing_type}"
+  },
+  {
+    "name": "structural_break_changepoint",
+    "category": "temporal_processing",
+    "description": "Process structural_break patterns using changepoint methods",
+    "parameters": {
+      "temporal_pattern": "structural_break",
+      "processing_type": "changepoint",
+      "model_order": 5,
+      "smoothing_parameter": 0.3
+    },
+    "complexity": "medium",
+    "components": [
+      "temporal_modeling",
+      "sequence_analysis",
+      "time_series_decomposition"
+    ],
+    "template_name": "{temporal_pattern}_{processing_type}"
+  },
+  {
+    "name": "cyclical_particle_filter",
+    "category": "temporal_processing",
+    "description": "Process cyclical patterns using particle_filter methods",
+    "parameters": {
+      "temporal_pattern": "cyclical",
+      "processing_type": "particle_filter",
+      "model_order": 2,
+      "smoothing_parameter": 0.3
+    },
+    "complexity": "medium",
+    "components": [
+      "temporal_modeling",
+      "sequence_analysis",
+      "time_series_decomposition"
+    ],
+    "template_name": "{temporal_pattern}_{processing_type}"
+  },
+  {
+    "name": "trend_hmm",
+    "category": "temporal_processing",
+    "description": "Process trend patterns using hmm methods",
+    "parameters": {
+      "temporal_pattern": "trend",
+      "processing_type": "hmm",
+      "model_order": 1,
+      "smoothing_parameter": 0.7
+    },
+    "complexity": "medium",
+    "components": [
+      "temporal_modeling",
+      "sequence_analysis",
+      "time_series_decomposition"
+    ],
+    "template_name": "{temporal_pattern}_{processing_type}"
+  }
+]

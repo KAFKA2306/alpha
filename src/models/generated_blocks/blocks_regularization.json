@@ -1,0 +1,182 @@
+[
+  {
+    "name": "elastic_weights_regularizer",
+    "category": "regularization",
+    "description": "Apply elastic regularization to weights",
+    "parameters": {
+      "regularization_type": "elastic",
+      "target": "weights",
+      "regularization_strength": 1.0,
+      "adaptation_rate": 0.01
+    },
+    "complexity": "complex",
+    "components": [
+      "regularization",
+      "constraint_enforcement",
+      "penalty_application"
+    ],
+    "template_name": "{regularization_type}_{target}_regularizer"
+  },
+  {
+    "name": "elastic_activations_regularizer",
+    "category": "regularization",
+    "description": "Apply elastic regularization to activations",
+    "parameters": {
+      "regularization_type": "elastic",
+      "target": "activations",
+      "regularization_strength": 1.0,
+      "adaptation_rate": 0.5
+    },
+    "complexity": "medium",
+    "components": [
+      "regularization",
+      "constraint_enforcement",
+      "penalty_application"
+    ],
+    "template_name": "{regularization_type}_{target}_regularizer"
+  },
+  {
+    "name": "nuclear_activations_regularizer",
+    "category": "regularization",
+    "description": "Apply nuclear regularization to activations",
+    "parameters": {
+      "regularization_type": "nuclear",
+      "target": "activations",
+      "regularization_strength": 0.1,
+      "adaptation_rate": 0.01
+    },
+    "complexity": "medium",
+    "components": [
+      "regularization",
+      "constraint_enforcement",
+      "penalty_application"
+    ],
+    "template_name": "{regularization_type}_{target}_regularizer"
+  },
+  {
+    "name": "adaptive_features_regularizer",
+    "category": "regularization",
+    "description": "Apply adaptive regularization to features",
+    "parameters": {
+      "regularization_type": "adaptive",
+      "target": "features",
+      "regularization_strength": 0.01,
+      "adaptation_rate": 0.5
+    },
+    "complexity": "medium",
+    "components": [
+      "regularization",
+      "constraint_enforcement",
+      "penalty_application"
+    ],
+    "template_name": "{regularization_type}_{target}_regularizer"
+  },
+  {
+    "name": "nuclear_features_regularizer",
+    "category": "regularization",
+    "description": "Apply nuclear regularization to features",
+    "parameters": {
+      "regularization_type": "nuclear",
+      "target": "features",
+      "regularization_strength": 0.01,
+      "adaptation_rate": 0.01
+    },
+    "complexity": "complex",
+    "components": [
+      "regularization",
+      "constraint_enforcement",
+      "penalty_application"
+    ],
+    "template_name": "{regularization_type}_{target}_regularizer"
+  },
+  {
+    "name": "group_gradients_regularizer",
+    "category": "regularization",
+    "description": "Apply group regularization to gradients",
+    "parameters": {
+      "regularization_type": "group",
+      "target": "gradients",
+      "regularization_strength": 1.0,
+      "adaptation_rate": 0.01
+    },
+    "complexity": "medium",
+    "components": [
+      "regularization",
+      "constraint_enforcement",
+      "penalty_application"
+    ],
+    "template_name": "{regularization_type}_{target}_regularizer"
+  },
+  {
+    "name": "group_gradients_regularizer",
+    "category": "regularization",
+    "description": "Apply group regularization to gradients",
+    "parameters": {
+      "regularization_type": "group",
+      "target": "gradients",
+      "regularization_strength": 1.0,
+      "adaptation_rate": 0.01
+    },
+    "complexity": "complex",
+    "components": [
+      "regularization",
+      "constraint_enforcement",
+      "penalty_application"
+    ],
+    "template_name": "{regularization_type}_{target}_regularizer"
+  },
+  {
+    "name": "nuclear_weights_regularizer",
+    "category": "regularization",
+    "description": "Apply nuclear regularization to weights",
+    "parameters": {
+      "regularization_type": "nuclear",
+      "target": "weights",
+      "regularization_strength": 0.01,
+      "adaptation_rate": 0.1
+    },
+    "complexity": "complex",
+    "components": [
+      "regularization",
+      "constraint_enforcement",
+      "penalty_application"
+    ],
+    "template_name": "{regularization_type}_{target}_regularizer"
+  },
+  {
+    "name": "elastic_weights_regularizer",
+    "category": "regularization",
+    "description": "Apply elastic regularization to weights",
+    "parameters": {
+      "regularization_type": "elastic",
+      "target": "weights",
+      "regularization_strength": 0.01,
+      "adaptation_rate": 0.01
+    },
+    "complexity": "medium",
+    "components": [
+      "regularization",
+      "constraint_enforcement",
+      "penalty_application"
+    ],
+    "template_name": "{regularization_type}_{target}_regularizer"
+  },
+  {
+    "name": "structured_weights_regularizer",
+    "category": "regularization",
+    "description": "Apply structured regularization to weights",
+    "parameters": {
+      "regularization_type": "structured",
+      "target": "weights",
+      "regularization_strength": 1.0,
+      "adaptation_rate": 0.01
+    },
+    "complexity": "complex",
+    "components": [
+      "regularization",
+      "constraint_enforcement",
+      "penalty_application"
+    ],
+    "template_name": "{regularization_type}_{target}_regularizer"
+  }
+]

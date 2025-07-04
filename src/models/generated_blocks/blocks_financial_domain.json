@@ -1,0 +1,812 @@
+[
+  {
+    "name": "quality_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to quality factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "quality",
+      "weighting_scheme": "equal",
+      "rebalancing_frequency": 1,
+      "decay_factor": 0.99
+    },
+    "complexity": "medium",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "volatility_clustering_stochastic",
+    "category": "financial_domain",
+    "description": "Analyze volatility_clustering using stochastic methodology",
+    "parameters": {
+      "market_property": "volatility_clustering",
+      "analysis_type": "stochastic",
+      "lookback_window": 50,
+      "sensitivity": 2.0
+    },
+    "complexity": "complex",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "style_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to style factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "style",
+      "weighting_scheme": "equal",
+      "rebalancing_frequency": 5,
+      "decay_factor": 0.99
+    },
+    "complexity": "medium",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "mean_reversion_multiscale",
+    "category": "financial_domain",
+    "description": "Analyze mean_reversion using multiscale methodology",
+    "parameters": {
+      "market_property": "mean_reversion",
+      "analysis_type": "multiscale",
+      "lookback_window": 20,
+      "sensitivity": 1.0
+    },
+    "complexity": "medium",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "jump_diffusion_stochastic",
+    "category": "financial_domain",
+    "description": "Analyze jump_diffusion using stochastic methodology",
+    "parameters": {
+      "market_property": "jump_diffusion",
+      "analysis_type": "stochastic",
+      "lookback_window": 50,
+      "sensitivity": 2.0
+    },
+    "complexity": "medium",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "technical_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to technical factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "technical",
+      "weighting_scheme": "momentum",
+      "rebalancing_frequency": 5,
+      "decay_factor": 0.99
+    },
+    "complexity": "medium",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "sector_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to sector factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "sector",
+      "weighting_scheme": "equal",
+      "rebalancing_frequency": 1,
+      "decay_factor": 0.95
+    },
+    "complexity": "medium",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "macro_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to macro factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "macro",
+      "weighting_scheme": "momentum",
+      "rebalancing_frequency": 5,
+      "decay_factor": 0.95
+    },
+    "complexity": "complex",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "quality_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to quality factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "quality",
+      "weighting_scheme": "risk_parity",
+      "rebalancing_frequency": 1,
+      "decay_factor": 0.95
+    },
+    "complexity": "complex",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "regime_switching_stochastic",
+    "category": "financial_domain",
+    "description": "Analyze regime_switching using stochastic methodology",
+    "parameters": {
+      "market_property": "regime_switching",
+      "analysis_type": "stochastic",
+      "lookback_window": 100,
+      "sensitivity": 0.1
+    },
+    "complexity": "medium",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "jump_diffusion_fractal",
+    "category": "financial_domain",
+    "description": "Analyze jump_diffusion using fractal methodology",
+    "parameters": {
+      "market_property": "jump_diffusion",
+      "analysis_type": "fractal",
+      "lookback_window": 20,
+      "sensitivity": 0.5
+    },
+    "complexity": "complex",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "sector_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to sector factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "sector",
+      "weighting_scheme": "equal",
+      "rebalancing_frequency": 10,
+      "decay_factor": 0.95
+    },
+    "complexity": "medium",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "regime_switching_stochastic",
+    "category": "financial_domain",
+    "description": "Analyze regime_switching using stochastic methodology",
+    "parameters": {
+      "market_property": "regime_switching",
+      "analysis_type": "stochastic",
+      "lookback_window": 5,
+      "sensitivity": 2.0
+    },
+    "complexity": "complex",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "jump_diffusion_spectral",
+    "category": "financial_domain",
+    "description": "Analyze jump_diffusion using spectral methodology",
+    "parameters": {
+      "market_property": "jump_diffusion",
+      "analysis_type": "spectral",
+      "lookback_window": 50,
+      "sensitivity": 1.0
+    },
+    "complexity": "simple",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "style_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to style factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "style",
+      "weighting_scheme": "equal",
+      "rebalancing_frequency": 10,
+      "decay_factor": 0.99
+    },
+    "complexity": "simple",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "style_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to style factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "style",
+      "weighting_scheme": "volatility",
+      "rebalancing_frequency": 20,
+      "decay_factor": 0.99
+    },
+    "complexity": "complex",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "jump_diffusion_spectral",
+    "category": "financial_domain",
+    "description": "Analyze jump_diffusion using spectral methodology",
+    "parameters": {
+      "market_property": "jump_diffusion",
+      "analysis_type": "spectral",
+      "lookback_window": 5,
+      "sensitivity": 2.0
+    },
+    "complexity": "complex",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "mean_reversion_multiscale",
+    "category": "financial_domain",
+    "description": "Analyze mean_reversion using multiscale methodology",
+    "parameters": {
+      "market_property": "mean_reversion",
+      "analysis_type": "multiscale",
+      "lookback_window": 10,
+      "sensitivity": 2.0
+    },
+    "complexity": "medium",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "volatility_clustering_spectral",
+    "category": "financial_domain",
+    "description": "Analyze volatility_clustering using spectral methodology",
+    "parameters": {
+      "market_property": "volatility_clustering",
+      "analysis_type": "spectral",
+      "lookback_window": 50,
+      "sensitivity": 0.5
+    },
+    "complexity": "simple",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "sector_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to sector factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "sector",
+      "weighting_scheme": "momentum",
+      "rebalancing_frequency": 10,
+      "decay_factor": 0.9
+    },
+    "complexity": "complex",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "volatility_clustering_fractal",
+    "category": "financial_domain",
+    "description": "Analyze volatility_clustering using fractal methodology",
+    "parameters": {
+      "market_property": "volatility_clustering",
+      "analysis_type": "fractal",
+      "lookback_window": 5,
+      "sensitivity": 1.0
+    },
+    "complexity": "medium",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "momentum_multiscale",
+    "category": "financial_domain",
+    "description": "Analyze momentum using multiscale methodology",
+    "parameters": {
+      "market_property": "momentum",
+      "analysis_type": "multiscale",
+      "lookback_window": 5,
+      "sensitivity": 0.1
+    },
+    "complexity": "complex",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "volatility_clustering_spectral",
+    "category": "financial_domain",
+    "description": "Analyze volatility_clustering using spectral methodology",
+    "parameters": {
+      "market_property": "volatility_clustering",
+      "analysis_type": "spectral",
+      "lookback_window": 100,
+      "sensitivity": 1.0
+    },
+    "complexity": "complex",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "style_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to style factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "style",
+      "weighting_scheme": "equal",
+      "rebalancing_frequency": 1,
+      "decay_factor": 0.99
+    },
+    "complexity": "complex",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "sector_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to sector factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "sector",
+      "weighting_scheme": "risk_parity",
+      "rebalancing_frequency": 20,
+      "decay_factor": 0.99
+    },
+    "complexity": "complex",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "technical_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to technical factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "technical",
+      "weighting_scheme": "momentum",
+      "rebalancing_frequency": 10,
+      "decay_factor": 0.9
+    },
+    "complexity": "simple",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "volatility_clustering_spectral",
+    "category": "financial_domain",
+    "description": "Analyze volatility_clustering using spectral methodology",
+    "parameters": {
+      "market_property": "volatility_clustering",
+      "analysis_type": "spectral",
+      "lookback_window": 100,
+      "sensitivity": 0.1
+    },
+    "complexity": "medium",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "sector_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to sector factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "sector",
+      "weighting_scheme": "equal",
+      "rebalancing_frequency": 20,
+      "decay_factor": 0.95
+    },
+    "complexity": "complex",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "volatility_clustering_multiscale",
+    "category": "financial_domain",
+    "description": "Analyze volatility_clustering using multiscale methodology",
+    "parameters": {
+      "market_property": "volatility_clustering",
+      "analysis_type": "multiscale",
+      "lookback_window": 20,
+      "sensitivity": 1.0
+    },
+    "complexity": "medium",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "mean_reversion_fractal",
+    "category": "financial_domain",
+    "description": "Analyze mean_reversion using fractal methodology",
+    "parameters": {
+      "market_property": "mean_reversion",
+      "analysis_type": "fractal",
+      "lookback_window": 50,
+      "sensitivity": 0.1
+    },
+    "complexity": "complex",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "macro_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to macro factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "macro",
+      "weighting_scheme": "equal",
+      "rebalancing_frequency": 10,
+      "decay_factor": 0.99
+    },
+    "complexity": "medium",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "jump_diffusion_fractal",
+    "category": "financial_domain",
+    "description": "Analyze jump_diffusion using fractal methodology",
+    "parameters": {
+      "market_property": "jump_diffusion",
+      "analysis_type": "fractal",
+      "lookback_window": 50,
+      "sensitivity": 0.1
+    },
+    "complexity": "complex",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "style_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to style factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "style",
+      "weighting_scheme": "equal",
+      "rebalancing_frequency": 10,
+      "decay_factor": 0.9
+    },
+    "complexity": "medium",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "jump_diffusion_stochastic",
+    "category": "financial_domain",
+    "description": "Analyze jump_diffusion using stochastic methodology",
+    "parameters": {
+      "market_property": "jump_diffusion",
+      "analysis_type": "stochastic",
+      "lookback_window": 100,
+      "sensitivity": 0.5
+    },
+    "complexity": "medium",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "mean_reversion_fractal",
+    "category": "financial_domain",
+    "description": "Analyze mean_reversion using fractal methodology",
+    "parameters": {
+      "market_property": "mean_reversion",
+      "analysis_type": "fractal",
+      "lookback_window": 5,
+      "sensitivity": 2.0
+    },
+    "complexity": "complex",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "quality_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to quality factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "quality",
+      "weighting_scheme": "volatility",
+      "rebalancing_frequency": 1,
+      "decay_factor": 0.95
+    },
+    "complexity": "medium",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "sector_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to sector factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "sector",
+      "weighting_scheme": "momentum",
+      "rebalancing_frequency": 5,
+      "decay_factor": 0.95
+    },
+    "complexity": "medium",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "regime_switching_spectral",
+    "category": "financial_domain",
+    "description": "Analyze regime_switching using spectral methodology",
+    "parameters": {
+      "market_property": "regime_switching",
+      "analysis_type": "spectral",
+      "lookback_window": 20,
+      "sensitivity": 0.5
+    },
+    "complexity": "complex",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "macro_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to macro factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "macro",
+      "weighting_scheme": "risk_parity",
+      "rebalancing_frequency": 10,
+      "decay_factor": 0.9
+    },
+    "complexity": "simple",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "jump_diffusion_spectral",
+    "category": "financial_domain",
+    "description": "Analyze jump_diffusion using spectral methodology",
+    "parameters": {
+      "market_property": "jump_diffusion",
+      "analysis_type": "spectral",
+      "lookback_window": 10,
+      "sensitivity": 0.5
+    },
+    "complexity": "medium",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "sector_factor_exposure",
+    "category": "financial_domain",
+    "description": "Calculate exposure to sector factors with dynamic weighting",
+    "parameters": {
+      "factor_type": "sector",
+      "weighting_scheme": "risk_parity",
+      "rebalancing_frequency": 1,
+      "decay_factor": 0.99
+    },
+    "complexity": "complex",
+    "components": [
+      "factor_modeling",
+      "risk_decomposition",
+      "attribution_analysis"
+    ],
+    "template_name": "{factor_type}_factor_exposure"
+  },
+  {
+    "name": "mean_reversion_stochastic",
+    "category": "financial_domain",
+    "description": "Analyze mean_reversion using stochastic methodology",
+    "parameters": {
+      "market_property": "mean_reversion",
+      "analysis_type": "stochastic",
+      "lookback_window": 20,
+      "sensitivity": 1.0
+    },
+    "complexity": "complex",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "jump_diffusion_fractal",
+    "category": "financial_domain",
+    "description": "Analyze jump_diffusion using fractal methodology",
+    "parameters": {
+      "market_property": "jump_diffusion",
+      "analysis_type": "fractal",
+      "lookback_window": 50,
+      "sensitivity": 1.0
+    },
+    "complexity": "complex",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "momentum_fractal",
+    "category": "financial_domain",
+    "description": "Analyze momentum using fractal methodology",
+    "parameters": {
+      "market_property": "momentum",
+      "analysis_type": "fractal",
+      "lookback_window": 10,
+      "sensitivity": 2.0
+    },
+    "complexity": "medium",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  },
+  {
+    "name": "regime_switching_fractal",
+    "category": "financial_domain",
+    "description": "Analyze regime_switching using fractal methodology",
+    "parameters": {
+      "market_property": "regime_switching",
+      "analysis_type": "fractal",
+      "lookback_window": 10,
+      "sensitivity": 0.5
+    },
+    "complexity": "medium",
+    "components": [
+      "market_microstructure",
+      "price_dynamics",
+      "risk_modeling"
+    ],
+    "template_name": "{market_property}_{analysis_type}"
+  }
+]
