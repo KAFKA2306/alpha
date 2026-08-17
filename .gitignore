@@ -25,6 +25,9 @@ results/
 # Jupyter Notebooks
 .ipynb_checkpoints/
 
+# Claude Code local project settings
+.claude/settings.local.json
+
 # VS Code
 .vscode/
 
