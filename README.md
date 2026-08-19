@@ -19,13 +19,13 @@ The repository also contains generated block data and older research scripts. Th
 
 ## Verified by CI
 
-The repository CI performs a small, dependency-bounded smoke test of the default domain-block registry:
+The repository CI runs the same `make check` command used locally. It:
 
-1. compile the tracked Python source,
-2. import the default registry,
-3. require exactly 15 registered default blocks,
-4. instantiate `layer_norm`, execute it on a tensor, and verify the output shape,
-5. require a clean checkout after validation.
+1. compiles the tracked Python source,
+2. runs the standard-library registry smoke test,
+3. requires exactly 15 registered default blocks,
+4. instantiates `layer_norm`, executes it on a tensor, and verifies the output shape,
+5. requires a clean checkout after validation.
 
 This is deliberately narrower than the complete research codebase. A green CI run does **not** verify architecture quality, backtest profitability, external data integrations, deployment, or monitoring.
 
@@ -42,25 +42,12 @@ The current repository does not provide runtime evidence for the following claim
 
 The broad dependency declaration in `requirements.txt` is not locked. Consolidating dependency and quality-tool ownership remains tracked in [Issue #2](https://github.com/KAFKA2306/alpha/issues/2).
 
-## Minimal verified surface
+## Local verification
 
-The CI smoke test uses Python 3.11, NumPy, and a CPU build of PyTorch. Equivalent local validation is:
+With Python 3.11, NumPy, and PyTorch installed:
 
 ```bash
-python -m compileall -q src tests
-PYTHONPATH=src python - <<'PY'
-import torch
-from models.domain_blocks import get_domain_block_registry
-
-registry = get_domain_block_registry()
-blocks = registry.get_all_blocks()
-assert len(blocks) == 15, len(blocks)
-
-module = registry.get_block("layer_norm").create_module((2, 4, 3))
-output = module(torch.randn(2, 4, 3))
-assert tuple(output.shape) == (2, 4, 3)
-print(f"default_blocks={len(blocks)}")
-PY
+make check
 ```
 
 ## Research boundary
