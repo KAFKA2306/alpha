@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  core-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Install smoke-test dependencies
+        run: |
+          python -m pip install --disable-pip-version-check numpy
+          python -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch
+      - name: Compile Python source
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -m compileall -q src tests
+      - name: Run default domain-block smoke test
+        env:
+          PYTHONPATH: src
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          python - <<'PY'
+          import torch
+          from models.domain_blocks import get_domain_block_registry
+
+          registry = get_domain_block_registry()
+          blocks = registry.get_all_blocks()
+          assert len(blocks) == 15, len(blocks)
+
+          module = registry.get_block("layer_norm").create_module((2, 4, 3))
+          output = module(torch.randn(2, 4, 3))
+          assert tuple(output.shape) == (2, 4, 3)
+          print(f"default_blocks={len(blocks)}")
+          PY
+      - name: Check clean checkout
+        run: git diff --exit-code
