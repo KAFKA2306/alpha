@@ -36,6 +36,19 @@ class DomainBlock(ABC):
         return {}
 
 
+class _ChannelLast1d(nn.Module):
+    """Apply a channel-first 1-D module to channel-last sequence tensors."""
+
+    def __init__(self, module: nn.Module):
+        super().__init__()
+        self.module = module
+
+    def forward(self, x):
+        if x.ndim == 3:
+            return self.module(x.transpose(1, 2)).transpose(1, 2)
+        return self.module(x)
+
+
 # Normalization Blocks
 class BatchNormBlock(DomainBlock):
     def __init__(self):
@@ -47,7 +60,7 @@ class BatchNormBlock(DomainBlock):
     
     def create_module(self, input_shape: Tuple[int, ...], **kwargs) -> nn.Module:
         num_features = input_shape[-1]
-        return nn.BatchNorm1d(num_features)
+        return _ChannelLast1d(nn.BatchNorm1d(num_features))
     
     def get_output_shape(self, input_shape: Tuple[int, ...], **kwargs) -> Tuple[int, ...]:
         return input_shape
@@ -79,7 +92,7 @@ class AdaptiveInstanceNormBlock(DomainBlock):
     
     def create_module(self, input_shape: Tuple[int, ...], **kwargs) -> nn.Module:
         num_features = input_shape[-1]
-        return nn.InstanceNorm1d(num_features, affine=True)
+        return _ChannelLast1d(nn.InstanceNorm1d(num_features, affine=True))
     
     def get_output_shape(self, input_shape: Tuple[int, ...], **kwargs) -> Tuple[int, ...]:
         return input_shape
@@ -202,7 +215,8 @@ class TimeMixingBlock(DomainBlock):
             return TimeMixingModule(input_shape[1])
         
         elif mixing_type == 'conv':
-            return nn.Conv1d(input_shape[-1], input_shape[-1], kernel_size=3, padding=1)
+            conv = nn.Conv1d(input_shape[-1], input_shape[-1], kernel_size=3, padding=1)
+            return _ChannelLast1d(conv)
     
     def get_output_shape(self, input_shape: Tuple[int, ...], **kwargs) -> Tuple[int, ...]:
         return input_shape
